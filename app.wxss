@@ -1,0 +1,289 @@
+@import '/styles/commom.wxss';
+
+page {
+  background: #F8F9FD;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+}
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: border-box;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+
+/*  -- flex弹性布局 -- */
+.flex {
+  display: flex;
+}
+.flex-wrap {
+	flex-wrap: wrap;
+}
+.flex-column {
+  flex-direction: column;
+}
+.text-center {
+  text-align: center;
+}
+.basis-xs {
+	flex-basis: 20%;
+}
+.basis-sm {
+	flex-basis: 40%;
+}
+.basis-df {
+	flex-basis: 50%;
+}
+.basis-lg {
+	flex-basis: 60%;
+}
+.basis-xl {
+	flex-basis: 80%;
+}
+.flex-sub {
+	flex: 1;
+}
+.flex-twice {
+	flex: 2;
+}
+.flex-treble {
+	flex: 3;
+}
+.justify-start {
+	justify-content: flex-start;
+}
+.justify-end {
+	justify-content: flex-end;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.justify-around {
+	justify-content: space-around;
+}
+.align-start {
+	align-items: flex-start;
+}
+.align-end {
+	align-items: flex-end;
+}
+.align-center {
+	align-items: center;
+}
+
+/*  -- Grid网格布局 -- */
+.grid {
+  display: grid;
+}
+.grid-cr-rpx {
+  height: 300rpx;
+  grid-template-columns: 100rpx 100rpx 100rpx;
+  grid-template-rows: 100rpx 100rpx 100rpx;
+}
+.grid-cr-per {
+  min-height: 200rpx;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: repeat(3, 33.33%);
+}
+.auto-fill {
+  height: 200rpx;
+  grid-template-columns: repeat(auto-fill, 20%);
+  grid-template-rows: repeat(2, 50%);
+}
+.grid-fr {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-cr-gap {
+  grid-template-columns: 100rpx 100rpx 100rpx;
+  grid-template-rows: 100rpx 100rpx 100rpx;
+  grid-row-gap: 20rpx;
+  grid-column-gap: 20rpx;
+}
+.grid-fr view {
+  height: 100rpx;
+  margin-bottom: 2rpx;
+}
+.grid .co-1:nth-child(n) {
+  background: #627DC2;
+}
+.grid .co-1:nth-child(2n) {
+  background: #7ac262;
+}
+.flex .co-2 {
+  width: 31%;
+  margin-bottom: 28rpx;
+  border-radius: 10rpx;
+}
+.flex .co-2:nth-child(1),.flex .co-2:nth-child(2),.flex .co-2:nth-child(3) {
+  margin-top: 28rpx;
+}
+/* 间距 */
+.margin-0 {
+	margin: 0;
+}
+.margin-xs {
+	margin: 10rpx;
+}
+.margin-top-sm {
+	margin-top: 20rpx;
+}
+.margin-top-lg {
+	margin-top: 100rpx;
+}
+.margin-left-sm {
+  margin-left: 20rpx;
+}
+.margin-r-xs {
+  margin-right: 10rpx;
+}
+.margin-lf-xs {
+  margin: 0 10rpx;
+}
+.margin-top {
+	margin-top: 28rpx;
+}
+.padding-sm {
+	padding: 20rpx;
+}
+.padding-lg {
+	padding: 28rpx;
+}
+.padding-xl {
+	padding: 40rpx;
+}
+.padding-xxl {
+	padding: 60rpx;
+}
+.padding-tb-xs {
+  padding: 10rpx 0;
+}
+.padding-tb-sm {
+  padding: 28rpx 0;
+}
+.radius {
+	border-radius: 6rpx!important;
+}
+.round {
+	border-radius: 5000rpx!important;
+}
+
+/* 颜色 */
+.text-blue {
+  color: #627DC2!important;
+}
+.text-white {
+  color: #fff!important;
+}
+.text-gray, {
+  color: #888888!important;
+}
+.text-black  {
+  color: #333333!important;
+}
+.line-blue {
+  border: 1rpx solid #627DC2!important;
+}
+.line-white {
+  border: 1rpx solid #fff!important;
+}
+.line-gray {
+  border: 1rpx solid #888888!important;
+}
+.line-black {
+  border: 1rpx solid #333333!important;
+}
+.bg-white {
+  background-color: #fff!important;
+}
+.bg-blue {
+  background-color: #627DC2!important;
+}
+.bg-green {
+  background-color: #34C691!important;
+}
+.bg-man {
+  background-color: #0081FF!important;
+}
+.bg-girl {
+  background-color: #E03997!important;
+}
+.bg-black {
+  background-color: #333333!important;
+}
+.bg-gradual-blue {
+  background: linear-gradient(to right, #91a4d4, #627DC2)!important;
+}
+
+/* 边框 */
+.border-bottom {
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+.border {
+  border: 1rpx solid rgba(0, 0, 0, 0.1)!important;
+}
+/* ==================
+          文本
+ ==================== */
+.text-xs {
+	font-size: 20rpx;
+}
+.text-sm {
+	font-size: 24rpx;
+}
+.text-df {
+	font-size: 28rpx;
+}
+.text-lg {
+	font-size: 32rpx;
+}
+.text-xl {
+	font-size: 36rpx;
+}
+.text-xxl {
+	font-size: 44rpx;
+}
+.text-sl {
+	font-size: 80rpx;
+}
+.text-xsl {
+	font-size: 120rpx;
+}
+.text-Abc {
+	text-transform: Capitalize;
+}
+.text-ABC {
+	text-transform: Uppercase;
+}
+.text-abc {
+	text-transform: Lowercase;
+}
+.text-price::before {
+	content: "¥";
+	font-size: 80%;
+	margin-right: 4rpx;
+}
+.text-cut {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.text-bold {
+	font-weight: bold;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

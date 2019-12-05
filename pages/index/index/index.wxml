@@ -1,0 +1,112 @@
+<!-- 搜索栏 -->
+<view class="search">
+  <image class="search-location" src="/images/png/icon_dw.png"></image>
+  <text class="search-address text-ellipsis">景和小区</text>
+  <view class="search-value flex align-cente">
+    <icon type="search" size="16"></icon>
+    <text class="search-tip">搜索</text>
+  </view>
+</view>
+<!-- 海报 -->
+<view class="poster"></view>
+<!-- 操作 -->
+<view class="option">
+  <view class="flex align-center flex-column">
+    <image class="option-img" src="/images/png/icon_qd.png"></image>
+    <text class="options-tip">签到</text>
+  </view>
+  <view class="flex align-center flex-column">
+    <image class="option-img" src="/images/png/icon_tg.png"></image>
+    <text class="options-tip">团购</text>
+  </view>
+  <view class="flex align-center flex-column">
+    <image class="option-img" src="/images/png/icon_qd.png"></image>
+    <text class="options-tip">领券</text>
+  </view>
+  <view class="flex align-center flex-column">
+    <image class="option-img" src="/images/png/icon_jfsc.png"></image>
+    <text class="options-tip">积分商城</text>
+  </view>
+</view>
+<!-- 公告 -->
+<view class="notice">
+  <image class="notice-img" src="/images/png/bg_sy_xx.png"></image>
+  <text class="notice-line"></text>
+  <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="3000" class="notice-swiper">
+    <swiper-item wx:for="{{newsList}}" wx:key="{{index}}" class="flex align-center">
+      <view class="notice-news-item" bindtap='detail'>{{item}}</view>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 限时抢购 -->
+<view class="rush">
+  <view class="rush-header">
+    <image class="rush-img" src="/images/png/icon_sd.png"></image>
+    <text class="rush-title">限时抢购</text>
+  </view>
+  <view class="rush-nav">
+    <view class="nav-item {{index == tabCur ? 'nav-name-active' : ''}}" wx:for="{{activList}}" wx:key data-index="{{index}}" bindtap="toSelectactive">
+      <text class="nav-name">{{item.time}}</text>
+      <text class="nav-name">{{item.tip}}</text>
+    </view>
+  </view>
+  <scroll-view scroll-y class="rush-list">
+    <view class="list-item" wx:for="{{3}}" wx:key>
+      <view class="list-flag">
+        <image class="flag-img" src="/images/png/bg_ms.png"></image>
+        <text class="flag-tip">秒杀</text>
+      </view>
+      <view class="list-img"></view>
+      <view class="list-detail">
+        <text class="list-title text-ellipsis">【顺丰空运】爽果乐 新鲜现货智利车</text>
+        <text class="list-spec text-ellipsis">规格:26-28mm</text>
+        <view class="list-progress cc-progress round">
+          <view class="bg-green round" style="width:66.66%">66.66%</view>
+        </view>
+        <view class="flex align-center justify-between">
+          <view class="flex align-center">
+            <text class="list-member">秒杀价:</text>
+            <text class="list-price">￥9.9</text>
+          </view>
+          <text class="list-original">￥90.00</text>
+          <view class="list-btn">立即抢购</view>
+        </view>
+      </view>
+    </view>
+    <view class="list-footer"></view>
+  </scroll-view>
+</view>
+<!-- 热卖推荐 -->
+<view class="host">
+  <view class="rush-header">
+    <image class="rush-img" src="/images/png/icon_rm.png"></image>
+    <text class="rush-title">热卖推荐</text>
+  </view>
+  <view class="host-container">
+    <view class="host-extend-box">
+      <block wx:for="{{goodList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+        <template is="extendItem" data="{{item,index:index}}"/>
+      </block>
+    </view>
+    <view class="host-extend-box">
+      <block wx:for="{{goodList}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+        <template is="extendItem" data="{{item,index:index}}"/>
+      </block>
+    </view>
+    <!--模板-->
+    <template name="extendItem">
+      <view class="card">
+        <view class="card-header">
+          <view class="card-header-img"></view>
+        </view>
+        <text class="card-name">草莓顺丰空运辽宁丹东99新 鲜红颜草莓奶油鲜红颜草莓奶油</text>
+        <text class="card-spec">规格:100mg</text>
+        <view class="card-option">
+          <text class="card-member-price">￥18.00</text>
+          <text class="card-original-price">￥18.00</text>
+          <image class="card-cart" src="/images/png/icon_tjgwc.png"></image>
+        </view>
+      </view>
+    </template>
+  </view>
+</view>

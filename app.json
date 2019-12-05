@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index/index",
+    "pages/sort/index/index",
+    "pages/cart/index/index",
+    "pages/message/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "鲜果优坊",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#333333",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "/images/tabbar/tab-home.png",
+        "selectedIconPath": "/images/tabbar/tab-home-active.png",
+        "pagePath": "pages/index/index/index",
+        "text": "精选好货"
+      },
+      {
+        "iconPath": "/images/tabbar/tab-sort.png",
+        "selectedIconPath": "/images/tabbar/tab-sort-active.png",
+        "pagePath": "pages/sort/index/index",
+        "text": "分类"
+      },
+      {
+        "iconPath": "/images/tabbar/tab-cart.png",
+        "selectedIconPath": "/images/tabbar/tab-cart-active.png",
+        "pagePath": "pages/cart/index/index",
+        "text": "购物车"
+      },
+      {
+        "iconPath": "/images/tabbar/tab-message.png",
+        "selectedIconPath": "/images/tabbar/tab-message-active.png",
+        "pagePath": "pages/message/index/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
