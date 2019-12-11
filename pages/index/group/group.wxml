@@ -1,0 +1,21 @@
+<scroll-view scroll-y class="list">
+  <view class="item" wx:for="{{8}}" wx:key>
+    <image class="item-img" src="https://img14.360buyimg.com/n0/jfs/t24622/168/1466210857/627211/fd1957a0/5bb225e2Nb553ce4b.png" mode="aspectFill"></image>
+    <view class="item-detail">
+      <text class="item-title text-ellipsis">泰国进口 金枕头榴莲 顺丰或京东发出 新鲜 水果 生鲜 坏果包赔 6-7斤</text>
+      <text class="item-spec text-ellipsis">规格:4-6斤</text>
+      <view class="item-progress cc-progress round">
+        <view class="bg-green round" style="width:66.66%">66.66%</view>
+      </view>
+      <view class="flex align-center justify-between">
+        <view class="flex align-center">
+          <text class="item-member">秒杀价:</text>
+          <text class="item-price">￥200.00</text>
+        </view>
+        <text class="item-original">￥208.00</text>
+        <view class="item-btn">去开团</view>
+      </view>
+    </view>
+  </view>
+  <text class="footer-no-data">—— 没有更多数据了 ——</text>
+</scroll-view>

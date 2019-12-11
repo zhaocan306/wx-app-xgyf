@@ -1,66 +1,60 @@
-// pages/sort/index/idnex.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    tabCur: 1,
+    navList: [
+      {
+        name: '苹果类',
+        code: 1
+      },
+      {
+        name: '梨子类',
+        code: 2
+      },
+      {
+        name: '桔柚类',
+        code: 3
+      },
+      {
+        name: '桃李类',
+        code: 4
+      },
+      {
+        name: '瓜类',
+        code: 5
+      },
+      {
+        name: '葡提类',
+        code: 6
+      }
+    ],
+    goodList: [
+      {
+        name: '智利进口车厘子巨无霸JJJ级 1磅装 果径约30-32mm 新鲜水果',
+        img: 'https://img14.360buyimg.com/n0/jfs/t1/99207/37/202/487010/5da933aaE752e01c2/d9589bfcd1e26b19.jpg',
+        price: 109
+      },
+      {
+        name: '智利进口车厘子巨无霸JJJ级 1磅装 果径约30-32mm 新鲜水果',
+        img: 'https://img14.360buyimg.com/n0/jfs/t1/99207/37/202/487010/5da933aaE752e01c2/d9589bfcd1e26b19.jpg',
+        price: 109
+      },
+      {
+        name: '智利进口车厘子巨无霸JJJ级 1磅装 果径约30-32mm 新鲜水果',
+        img: 'https://img14.360buyimg.com/n0/jfs/t1/99207/37/202/487010/5da933aaE752e01c2/d9589bfcd1e26b19.jpg',
+        price: 109
+      },
+      {
+        name: '智利进口车厘子巨无霸JJJ级 1磅装 果径约30-32mm 新鲜水果',
+        img: 'https://img14.360buyimg.com/n0/jfs/t1/99207/37/202/487010/5da933aaE752e01c2/d9589bfcd1e26b19.jpg',
+        price: 109
+      }
+    ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 点击分类
+  clickTabcur(e) {
+    let code = e.currentTarget.dataset.code;
+    this.setData({
+      tabCur: code
+    })
   }
 })

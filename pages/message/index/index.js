@@ -1,66 +1,54 @@
-// pages/message/index/index.js
+const app= getApp();
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    list: [
+      {
+        img: '/images/png/icon_my_dfk.png',
+        tip: '待付款',
+        code: 1
+      },
+      {
+        img: '/images/png/icon_my_dfh.png',
+        tip: '待发货',
+        code: 2
+      },
+      {
+        img: '/images/png/icon_my_dsh.png',
+        tip: '待收货',
+        code: 3
+      },
+      {
+        img: '/images/png/icon_my_tk.png',
+        tip: '退款/售后',
+        code: 4
+      }
+    ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad(options) {
+    let userInfo = app.globalData.userInfo
+    this.setData({
+      avatarUrl: userInfo.avatarUrl,
+      nickName: userInfo.nickName
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 查看订单
+  toOrderList(e) {
+    let index = e.currentTarget.dataset.index;
+    wx.navigateTo({
+      url: '/pages/message/order/order?index=' + index
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 查看自己领取的优惠券
+  toCoupon() {
+    wx.navigateTo({
+      url: '/pages/message/coupon/coupon'
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 查看收货地址
+  toAddress() {
+    wx.navigateTo({
+      url: '/pages/message/address/address'
+    })
   }
 })

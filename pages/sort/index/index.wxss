@@ -1,1 +1,116 @@
-/* pages/sort/index/idnex.wxss */
+/* 搜索框 */
+.search {
+  height: 110rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24rpx;
+}
+.search .search-value {
+  flex: 1;
+  height:64rpx;
+  background:rgba(245,245,245,1);
+  border-radius:32rpx;
+  margin-left: 14rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 34rpx;
+}
+.search .search-tip {
+  font-size:24rpx;
+  color:rgba(217,217,217,1);
+  padding-left: 14rpx;
+}
+/* 左边分类列表 */
+.nav {
+  width: 164rpx;
+  height: calc(100vh - 110rpx);
+  background: #F8F9FD;
+}
+.nav .nav-item {
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:26rpx;
+  font-weight:400;
+  color:#999999;
+}
+.nav .nav-item-active {
+  background: #fff;
+  color: #333333;
+}
+/* 右边分类列表 */
+.main {
+  width: calc(100% - 164rpx);
+  height: calc(100vh - 110rpx);
+  background: #FFFFFF;
+  padding: 0 24rpx;
+}
+.main-item {
+  padding-bottom: 24rpx;
+}
+.main .main-poster {
+  width: 100%;
+  height: 231rpx;
+  border-radius: 10rpx;
+  margin-top: 24rpx;
+  margin-bottom: 40rpx;
+}
+.main .main-container {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 30rpx;
+}
+.main .main-extend-box {
+  flex: 1;
+  margin-right: 40rpx;
+}
+.main .main-extend-box:last-child {
+  margin-right: 0;
+}
+.main .card {
+  margin-bottom: 30rpx;
+}
+.main .card-header-img {
+  width:240rpx;
+  height:240rpx;
+  border-radius:16rpx;
+}
+.main .card-name {
+  width: 240rpx;
+  font-size:26rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:37rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 18rpx;
+  padding-bottom: 15rpx;
+}
+.main .card-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .card-member-price {
+  font-size:32rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(250,115,41,1);
+  line-height:33rpx;
+}
+.main .card-price-util {
+  font-size:24rpx;
+}
+.main .card-cart {
+  width: 44rpx;
+  height: 44rpx;
+}

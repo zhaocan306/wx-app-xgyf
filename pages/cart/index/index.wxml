@@ -1,2 +1,32 @@
-<!--pages/cart/index/index.wxml-->
-<text>pages/cart/index/index.wxml</text>
+<scroll-view scroll-y class="list">
+  <view class="item" wx:for="{{cartList}}" wx:key>
+    <view class="item-header flex align-center">
+      <checkbox-group data-index="{{index}}" bindchange="checkboxChange">
+        <checkbox checked="{{item.isSelect}}"/>
+      </checkbox-group>
+      <image class="item-header-img" src="{{item.url}}" mode="aspectFit"></image>
+      <view class="item-header-detail">
+        <text class="item-header-name">{{item.name}}</text>
+        <text class="item-header-spec">规格:{{item.spec}}</text>
+      </view>
+    </view>
+    <view class="item-content">
+      <text class="item-content-price"><text class="item-content-util">￥</text>{{item.price}}</text>
+      <Numberbox value="{{item.value}}" index="{{index}}" bind:change="changeNumber"></Numberbox>
+    </view>
+  </view>
+</scroll-view>
+<!-- 底部操作按钮 -->
+<view class="footer">
+  <view class="flex align-center">
+    <checkbox-group bindchange="checkboxAllChange">
+      <checkbox checked="{{isAllSeclect}}"/>
+    </checkbox-group>
+    <text class="footer-name">全选</text>
+  </view>
+  <view class="footer-content">
+    <text class="footer-content-title">合计：<text class="footer-content-price">￥{{orderPrice}}</text></text>
+    <text class="footer-content-tip">(不含运费)</text>
+  </view>
+  <view class="footer-btn {{orderAmount == 0 ? 'disabled' : ''}}">去结算({{orderAmount}})</view>
+</view>

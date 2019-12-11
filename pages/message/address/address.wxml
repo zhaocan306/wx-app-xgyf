@@ -1,0 +1,30 @@
+<!-- 列表 -->
+<scroll-view scroll-y class="list">
+  <view class="item">
+    <view class="flex align-center justify-between">
+      <text class="item-name">张先生</text>
+      <text class="item-tip">18888888888</text>
+    </view>
+    <text class="item-address">湖南省长沙市岳麓区金星路咸嘉湖街道高新向日葵小区3栋2203号</text>
+    <view class="item-footer">
+      <view class="flex align-center">
+        <checkbox-group>
+          <checkbox checked="true"/>
+        </checkbox-group>
+        <text class="item-default">设为默认</text>
+      </view>
+      <view class="flex align-center">
+        <view class="flex align-center">
+          <text class="iconfont icon-bianji"></text>
+          <text class="item-options">编辑</text>
+        </view>
+        <view class="flex align-center margin-left-sm">
+          <text class="iconfont icon-shanchu"></text>
+          <text class="item-options">删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<!-- 底部按钮 -->
+<view class="footer" bindtap="addAddress">新增收货地址</view>

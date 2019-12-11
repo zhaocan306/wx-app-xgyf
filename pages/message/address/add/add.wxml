@@ -1,0 +1,25 @@
+<form class="list">
+  <view class="item">
+    <text class="item-name">姓名:</text>
+    <input class="item-value flex-sub" placeholder="请填写收货人姓名"></input>
+  </view>
+  <view class="item">
+    <text class="item-name">电话:</text>
+    <input class="item-value flex-sub" placeholder="请填写收货人电话"></input>
+  </view>
+  <view class="item">
+    <text class="item-name">详细地址:</text>
+    <input class="item-value flex-sub" placeholder="请填写具体地址"></input>
+  </view>
+  <view class="item">
+    <text class="item-name">门牌号:</text>
+    <input class="item-value flex-sub" placeholder="请填写门牌号码"></input>
+  </view>
+  <view class="item">
+    <text class="item-name">默认地址:</text>
+    <switch checked="true"/>
+  </view>
+  <view class="flex align-center justify-center">
+    <button class="btn">保存并使用</button>
+  </view>
+</form>

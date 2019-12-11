@@ -1,66 +1,100 @@
-// pages/cart/index/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    value: 0,
+    isAllSeclect: false,
+    cartList: [
+      {
+        url: 'https://img14.360buyimg.com/n0/jfs/t24622/168/1466210857/627211/fd1957a0/5bb225e2Nb553ce4b.png',
+        name: '泰国进口 金枕头榴莲 顺丰或京东发出 新鲜 水果 生鲜 坏果包赔 6-7斤',
+        spec: '4-6斤',
+        price: 200,
+        value: 1,
+        isSelect: false
+      },
+      {
+        url: 'https://img14.360buyimg.com/n0/jfs/t1/80943/18/9288/317083/5d70af2cEd76ed14f/9f3e6efcada049c2.jpg',
+        name: '秦礼 福建管溪蜜柚红心柚子新鲜水果当季平和红肉整箱批发应季 红心柚3-4粒礼盒装8.5-10斤带箱',
+        spec: '4-6斤',
+        price: 59.90,
+        value: 1,
+        isSelect: false
+      }
+    ],
+    orderAmount: 0,
+    orderPrice: 0
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad(options) {
+    let self = this;
+    let isAllSeclect = self.data.cartList.every(item => {
+      return item.isSelect
+    })
+    self.setData({
+      isAllSeclect: isAllSeclect
+    })
+    self.getOrderAmount()
   },
+  // 复选框改变的时候
+  checkboxChange(e) {
+    let self = this;
+    let isSelect = e.detail.value.length ? true : false;
+    let index = e.currentTarget.dataset.index;
+    let cartList = self.data.cartList;
+    cartList[index].isSelect = isSelect;
+    let isAllSeclect = cartList.every(item => {
+      return item.isSelect
+    })
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+    self.setData({
+      cartList: cartList,
+      isAllSeclect: isAllSeclect
+    })
+    self.getOrderAmount()
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 修改商品数量
+  changeNumber(e) {
+    let value = e.detail.value;
+    let index = e.detail.index;
+    let cartList = this.data.cartList;
+    if(value == 0) {
+      cartList.splice(index,1);
+    } else {
+      cartList[index].value = value;
+    }
+    this.setData({
+      cartList: cartList
+    })
+    this.getOrderAmount()
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  // 全选
+  checkboxAllChange(e) {
+    let self = this;
+    let isAllSeclect = e.detail.value.length ? true : false;
+    let cartList = self.data.cartList;
+    cartList.forEach((item,index) => {
+      cartList[index].isSelect = isAllSeclect
+    })
+    self.setData({
+      cartList: cartList,
+      isAllSeclect: isAllSeclect
+    })
+    self.getOrderAmount()
   },
+  // 订单金额
+  getOrderAmount() {
+    let self = this;
+    let cartList = self.data.cartList;
+    let orderPrice = 0;
+    let orderAmount = 0;
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    cartList.forEach(item => {
+      if(item.isSelect) {
+        orderPrice+=(item.price*item.value);
+        orderAmount+=item.value
+      }
+    })
+    self.setData({
+      orderPrice: orderPrice.toFixed(2),
+      orderAmount: orderAmount
+    })
   }
 })

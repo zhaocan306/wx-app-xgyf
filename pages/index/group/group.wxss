@@ -1,0 +1,88 @@
+.list {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  top: 0;
+  box-sizing: border-box;
+  padding: 0 24rpx;
+}
+.list .item {
+  height: 213rpx;
+  background: rgba(255,255,255,1);
+  border-radius: 8rpx;
+  margin: 0 19rpx 0;
+  position: relative;
+  padding-left: 13rpx;
+  padding-right: 18rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+}
+.list .item:first-child {
+  margin-top: 24rpx;
+}
+.list .item-img {
+  width:143rpx;
+  height:142rpx;
+  margin-right: 5rpx;
+}
+.list .item-detail {
+  height: 100%;
+  padding-top: 12rpx;
+  padding-bottom: 19rpx;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.list .item-title {
+  font-size:28rpx;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  line-height:40rpx;
+  width: 490rpx;
+}
+.list .item-spec {
+  font-size:24rpx;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  line-height:33rpx;
+}
+.list .item-progress {
+  width:311rpx;
+  height:33rpx;
+  background: #BEFFE7;
+}
+.list .item-member {
+  font-size:22rpx;
+  font-weight:600;
+  color:rgba(250,115,41,1);
+  line-height:30rpx;
+}
+.list .item-price {
+  font-size:32rpx;
+  font-weight:600;
+  color:rgba(250,115,41,1);
+  line-height:30rpx;
+}
+.list .item-original {
+  font-size:22rpx;
+  color:rgba(153,153,153,1);
+  line-height:30rpx;
+  text-decoration: line-through;
+  flex: 1;
+  padding-left: 10rpx;
+}
+.list .item-btn {
+  width:126rpx;
+  height:44rpx;
+  background:rgba(250,115,41,1);
+  border-radius:22rpx;
+  font-size:22rpx;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

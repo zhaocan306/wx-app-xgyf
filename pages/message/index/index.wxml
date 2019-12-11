@@ -1,2 +1,71 @@
-<!--pages/message/index/index.wxml-->
-<text>pages/message/index/index.wxml</text>
+<image class="message-bg" src="/images/png/bg_grzx_tb.png"></image>
+<view class="message">
+  <view class="flex align-center">
+    <image class="message-header-img" src="{{avatarUrl}}"></image>
+    <text class="message-header-tip">{{nickName}}</text>
+  </view>
+  <view class="message-card">
+    <view class="flex align-center justify-between">
+      <text class="message-card-title">我的订单</text>
+      <text class="message-card-tip" data-index="0" bindtap="toOrderList">全部订单</text>
+      <text class="iconfont icon-arrowRight" data-index="0" bindtap="toOrderList"></text>
+    </view>
+    <view class="flex align-center justify-around message-card-main">
+      <view class="flex align-center flex-column" wx:for="{{list}}" wx:key data-index="{{item.code}}" bindtap="toOrderList">
+        <image class="message-card-img" src="{{item.img}}"></image>
+        <text class="message-card-spec">{{item.tip}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="message-card">
+    <view class="flex align-center justify-between">
+      <text class="message-card-title">我的资产</text>
+    </view>
+    <view class="flex align-center justify-around message-card-main">
+      <view class="flex align-center justify-between flex-sub message-card-item" bindtap="toCoupon">
+        <view class="flex flex-column">
+          <text class="message-card-item-name">5张</text>
+          <text class="message-card-item-tip">优惠券</text>
+        </view>
+        <image class="message-card-item-coupon" src="/images/png/bg_my_yhj.png"></image>
+      </view>
+      <view class="flex align-center justify-between flex-sub message-card-item">
+        <view class="flex flex-column">
+          <text class="message-card-item-name">0.00元</text>
+          <text class="message-card-item-tip">我的钱包</text>
+        </view>
+        <image class="message-card-item-wellet" src="/images/png/bg_my_qb.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="message-card">
+    <view class="flex align-center justify-between">
+      <text class="message-card-title">其他服务</text>
+    </view>
+    <view class="flex align-center message-card-main" bindtap="toAddress">
+      <view class="flex align-center flex-column flex-sub">
+        <image class="message-card-imgs" src="/images/png/icon_my_shdz.png"></image>
+        <text class="message-card-spec">收货地址</text>
+      </view>
+      <view class="flex align-center flex-column flex-sub">
+        <image class="message-card-imgs" src="/images/png/icon_my_wdsc.png"></image>
+        <text class="message-card-spec">我的收藏</text>
+      </view>
+      <view class="flex align-center flex-column flex-sub">
+        <image class="message-card-imgs" src="/images/png/icon_my_kb.png"></image>
+        <text class="message-card-spec">卡包管理</text>
+      </view>
+    </view>
+    <view class="flex align-center justify-around message-card-main">
+      <view class="flex align-center flex-column flex-sub">
+        <image class="message-card-imgs" src="/images/png/icon_my_ljzx.png"></image>
+        <text class="message-card-spec">领券中心</text>
+      </view>
+      <view class="flex align-center flex-column flex-sub">
+        <image class="message-card-imgs" src="/images/png/icon_my_sz.png"></image>
+        <text class="message-card-spec">设置中心</text>
+      </view>
+      <view class="flex align-center flex-column flex-sub"></view>
+    </view>
+  </view>
+</view>

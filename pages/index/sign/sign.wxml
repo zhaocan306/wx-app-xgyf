@@ -1,0 +1,98 @@
+<!-- 背景图 -->
+<image class="sign-bg" src="/images/png/bg_qd.png"></image>
+<view class="sign">
+  <view class="sign-header flex align-center justify-between">
+    <image class="sign-header-img" src="{{avatarUrl}}"></image>
+    <view class="flex flex-column flex-sub">
+      <text class="sign-header-title">已经连续签到<text class="text-green padding-mm">1</text>天</text>
+      <text class="sign-header-tip">明日签到即可获得10梨币</text>
+    </view>
+    <view class="flex align-center">
+      <image class="sign-header-icon" src="/images/png/icon_jb.png"></image>
+      <text class="sign-header-num">200币</text>
+    </view>
+  </view>
+  <view class="sign-card">
+    <text class="card-title">连续签到领好礼</text>
+    <view class="flex align-center">
+      <view class="flex flex-column flex-sub margin-r-37">
+        <view class="card-main">
+          <view class="main-item bg-green text-white">
+            <text class="main-name">第一天</text>
+            <image class="main-img" src="/images/png/icon_jb.png"></image>
+            <text class="main-name">10币</text>
+          </view>
+          <view class="main-item">
+            <text class="main-name">第二天</text>
+            <image class="main-img" src="/images/png/icon_jb.png"></image>
+            <text class="main-name">20币</text>
+          </view>
+        </view>
+        <view class="card-main">
+          <view class="main-item">
+            <text class="main-name">第五天</text>
+            <image class="main-img" src="/images/png/icon_jb.png"></image>
+            <text class="main-name">20币</text>
+          </view>
+          <view class="main-item">
+            <text class="main-name">第六天</text>
+            <image class="main-img" src="/images/png/icon_jb.png"></image>
+            <text class="main-name">20币</text>
+          </view>
+        </view>
+      </view>
+      <view class="flex flex-column flex-sub">
+        <view class="card-main">
+          <view class="main-item">
+            <text class="main-name">第三天</text>
+            <image class="main-img" src="/images/png/icon_jb.png"></image>
+            <text class="main-name">10币</text>
+          </view>
+          <view class="main-item">
+            <text class="main-name">第四天</text>
+            <image class="main-img" src="/images/png/icon_jb.png"></image>
+            <text class="main-name">20币</text>
+          </view>
+        </view>
+        <view class="card-main flex-twice">
+          <view class="main-item main-items">
+            <view class="flex flex-column">
+              <text class="main-name">第七天</text>
+              <text class="main-tip">金币翻x倍</text>
+            </view>
+            <image class="main-imgs" src="/images/png/icon_jbk.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="title">梨币换好礼</view>
+  <view class="host">
+    <view class="host-container">
+      <view class="host-extend-box">
+        <block wx:for="{{goodList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+          <template is="extendItem" data="{{item,index:index}}"/>
+        </block>
+      </view>
+      <view class="host-extend-box">
+        <block wx:for="{{goodList}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+          <template is="extendItem" data="{{item,index:index}}"/>
+        </block>
+      </view>
+      <!--模板-->
+      <template name="extendItem">
+        <view class="card" bindtap="toDetail">
+          <view class="card-header">
+            <image class="card-header-img" src="https://img14.360buyimg.com/n0/jfs/t24622/168/1466210857/627211/fd1957a0/5bb225e2Nb553ce4b.png" mode="aspectFill"></image>
+          </view>
+          <text class="card-name">泰国进口 金枕头榴莲 顺丰或京东发出 新鲜 水果 生鲜 坏果包赔 6-7斤</text>
+          <view class="card-option">
+            <image class="card-option-img" src="/images/png/icon_jb.png"></image>
+            <text class="card-original-price">2000</text>
+            <view class="card-cart flex align-center justify-center">立即兑换</view>
+          </view>
+        </view>
+      </template>
+    </view>
+  </view>
+</view>

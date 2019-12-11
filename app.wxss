@@ -1,4 +1,5 @@
 @import '/styles/commom.wxss';
+@import '/styles/font.wxss';
 
 page {
   background: #F8F9FD;
@@ -150,8 +151,14 @@ image {
 .margin-lf-xs {
   margin: 0 10rpx;
 }
+.margin-r-37 {
+  margin-right: 37rpx;
+}
 .margin-top {
 	margin-top: 28rpx;
+}
+.padding-mm {
+	padding: 10rpx;
 }
 .padding-sm {
 	padding: 20rpx;
@@ -170,6 +177,9 @@ image {
 }
 .padding-tb-sm {
   padding: 28rpx 0;
+}
+.padding-r-xl {
+  padding-right: 40rpx;
 }
 .radius {
 	border-radius: 6rpx!important;
@@ -190,6 +200,12 @@ image {
 }
 .text-black  {
   color: #333333!important;
+}
+.text-orange {
+  color: #FFA854!important;
+}
+.text-green {
+  color: #34C691!important;
 }
 .line-blue {
   border: 1rpx solid #627DC2!important;
@@ -220,6 +236,12 @@ image {
 }
 .bg-black {
   background-color: #333333!important;
+}
+.bg-yellow {
+  background-color: #FCD100!important;
+}
+.bg-orange {
+  background-color: #FA7329!important;
 }
 .bg-gradual-blue {
   background: linear-gradient(to right, #91a4d4, #627DC2)!important;
@@ -281,9 +303,17 @@ image {
 .text-bold {
 	font-weight: bold;
 }
-
 .text-ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.footer-no-data {
+  display: block;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+  padding-bottom: 20rpx;
 }

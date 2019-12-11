@@ -8,14 +8,30 @@
   </view>
 </view>
 <!-- 海报 -->
-<view class="poster"></view>
+<view class="poster swiper-container">
+  <swiper class="card-swiper" circular="true" autoplay="true" interval="4000" duration="500" easing-function="linear" bindchange="cardSwiper">
+    <block wx:for="{{posterList}}" wx:key>
+      <swiper-item class="{{cardCur==index?'cur':''}}">
+        <view class="swiper-item">
+          <image class='swiper-img' src="{{item}}" mode="aspectFill"></image>
+        </view>
+      </swiper-item>
+      </block>
+  </swiper>
+  <view class="dots">
+    <block wx:for="{{posterList}}" wx:key>
+      <view class="dot {{cardCur==index?'dot-active':''}}"></view>
+    </block>
+  </view>
+  <!-- <image class="poster-image" src="https://m.360buyimg.com/babel/jfs/t1/106158/17/4681/109141/5de8d791Ef0d9bf20/b2eac7192fdaaf06.jpg" mode="aspectFit"></image> -->
+</view>
 <!-- 操作 -->
 <view class="option">
-  <view class="flex align-center flex-column">
+  <view class="flex align-center flex-column" bindtap="toSign">
     <image class="option-img" src="/images/png/icon_qd.png"></image>
     <text class="options-tip">签到</text>
   </view>
-  <view class="flex align-center flex-column">
+  <view class="flex align-center flex-column" bindtap="toGroup">
     <image class="option-img" src="/images/png/icon_tg.png"></image>
     <text class="options-tip">团购</text>
   </view>
@@ -51,24 +67,24 @@
     </view>
   </view>
   <scroll-view scroll-y class="rush-list">
-    <view class="list-item" wx:for="{{3}}" wx:key>
+    <view class="list-item" wx:for="{{3}}" wx:key bindtap="toDetail">
       <view class="list-flag">
         <image class="flag-img" src="/images/png/bg_ms.png"></image>
         <text class="flag-tip">秒杀</text>
       </view>
-      <view class="list-img"></view>
+      <image class="list-img" src="https://img14.360buyimg.com/n0/jfs/t24622/168/1466210857/627211/fd1957a0/5bb225e2Nb553ce4b.png" mode="aspectFill"></image>
       <view class="list-detail">
-        <text class="list-title text-ellipsis">【顺丰空运】爽果乐 新鲜现货智利车</text>
-        <text class="list-spec text-ellipsis">规格:26-28mm</text>
+        <text class="list-title text-ellipsis">泰国进口 金枕头榴莲 顺丰或京东发出 新鲜 水果 生鲜 坏果包赔 6-7斤</text>
+        <text class="list-spec text-ellipsis">规格:4-6斤</text>
         <view class="list-progress cc-progress round">
           <view class="bg-green round" style="width:66.66%">66.66%</view>
         </view>
         <view class="flex align-center justify-between">
           <view class="flex align-center">
             <text class="list-member">秒杀价:</text>
-            <text class="list-price">￥9.9</text>
+            <text class="list-price">￥200.00</text>
           </view>
-          <text class="list-original">￥90.00</text>
+          <text class="list-original">￥208.00</text>
           <view class="list-btn">立即抢购</view>
         </view>
       </view>
@@ -95,15 +111,15 @@
     </view>
     <!--模板-->
     <template name="extendItem">
-      <view class="card">
+      <view class="card" bindtap="toDetail">
         <view class="card-header">
-          <view class="card-header-img"></view>
+          <image class="card-header-img" src="https://img14.360buyimg.com/n0/jfs/t24622/168/1466210857/627211/fd1957a0/5bb225e2Nb553ce4b.png" mode="aspectFill"></image>
         </view>
-        <text class="card-name">草莓顺丰空运辽宁丹东99新 鲜红颜草莓奶油鲜红颜草莓奶油</text>
-        <text class="card-spec">规格:100mg</text>
+        <text class="card-name">泰国进口 金枕头榴莲 顺丰或京东发出 新鲜 水果 生鲜 坏果包赔 6-7斤</text>
+        <text class="card-spec">规格:4斤</text>
         <view class="card-option">
-          <text class="card-member-price">￥18.00</text>
-          <text class="card-original-price">￥18.00</text>
+          <text class="card-member-price">￥200.00</text>
+          <text class="card-original-price">￥208.00</text>
           <image class="card-cart" src="/images/png/icon_tjgwc.png"></image>
         </view>
       </view>

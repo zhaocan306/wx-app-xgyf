@@ -36,8 +36,14 @@
 /* 海报 */
 .poster {
   height: 309rpx;
-  background: #00C657;
-  margin: 0 24rpx;
+  /* padding: 0 24rpx; */
+  background: #fff;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.poster .poster-image {
+  height: 309rpx;
 }
 /* 操作 */
 .option {
@@ -195,7 +201,6 @@
 .rush .rush-list .list-img {
   width:143rpx;
   height:142rpx;
-  background: #00C657;
   margin-right: 5rpx;
 }
 .rush .rush-list .list-detail {
@@ -259,7 +264,6 @@
 }
 /* 热卖推荐 */
 .host {
-  height: 150rpx;
   background: #fff;
   padding: 0 24rpx;
 }
@@ -299,7 +303,6 @@
 .host .card-header-img {
   width:208rpx;
   height:208rpx;
-  background: #00C657;
 }
 .host .card-name {
   font-size:26rpx;

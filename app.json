@@ -1,9 +1,17 @@
 {
   "pages": [
+    "pages/login/power/power",
     "pages/index/index/index",
+    "pages/index/detail/detail",
     "pages/sort/index/index",
     "pages/cart/index/index",
-    "pages/message/index/index"
+    "pages/index/sign/sign",
+    "pages/message/index/index",
+    "pages/index/group/group",
+    "pages/message/order/order",
+    "pages/message/address/address",
+    "pages/message/address/add/add",
+    "pages/message/coupon/coupon"
   ],
   "window": {
     "backgroundTextStyle": "light",

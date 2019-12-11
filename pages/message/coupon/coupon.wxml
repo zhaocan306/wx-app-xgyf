@@ -1,0 +1,39 @@
+<!-- 顶部导航栏 -->
+<view class="nav">
+  <view class="nav-item {{tabCur == 1 ? 'nav-item-active' : ''}}" data-index="1" bindtap="toTabCur">未使用</view>
+  <view class="line"></view>
+  <view class="nav-item {{tabCur == 2 ? 'nav-item-active' : ''}}" data-index="2" bindtap="toTabCur">已使用</view>
+  <view class="line"></view>
+  <view class="nav-item {{tabCur == 3 ? 'nav-item-active' : ''}}" data-index="3" bindtap="toTabCur">已过期</view>
+</view>
+<!-- 列表 -->
+<scroll-view scroll-y class="list">
+  <view class="item" wx:for="{{dataList}}" wx:key wx:if="{{tabCur == 1}}">
+    <image class="item-img" src="{{item.img}}"></image>
+    <view class="card">
+      <view class="card-header">
+        <text class="card-header-util">￥<text class="card-header-price">10</text></text>
+        <text class="card-header-tip">满50元使用</text>
+      </view>
+      <view class="card-content">
+        <text class="card-content-title">全场通用优惠卷</text>
+        <text class="card-content-time">2019.09.24-2020.09.24</text>
+      </view>
+      <view class="card-option">去使用</view>
+    </view>
+  </view>
+  <view class="item" wx:for="{{dataList}}" wx:key wx:if="{{tabCur == 2}}">
+    <image class="item-img" src="/images/png/bg_yhj_ysy.png"></image>
+    <view class="card">
+      <view class="card-header">
+        <text class="card-header-util">￥<text class="card-header-price">10</text></text>
+        <text class="card-header-tip">满50元使用</text>
+      </view>
+      <view class="card-content">
+        <text class="card-content-title">全场通用优惠卷</text>
+        <text class="card-content-time">2019.09.24-2020.09.24</text>
+      </view>
+      <image class="card-overdue" src="/images/png/bg_ysy_sm.png"></image>
+    </view>
+  </view>
+</scroll-view>

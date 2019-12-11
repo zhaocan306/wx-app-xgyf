@@ -1,0 +1,118 @@
+.list {
+  width: 100%;
+  height: calc(100vh - 88rpx);
+  position: absolute;
+  top: 88rpx;
+  box-sizing: border-box;
+  padding: 0 24rpx;
+}
+.list .item {
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius:16rpx;
+  margin-bottom: 30rpx;
+}
+.list .item:first-child {
+  margin-top: 30rpx;
+}
+.list .item:last-child {
+  margin-bottom: 0rpx;
+}
+.list .item-header {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #EEEEEE;
+}
+.list .item-header-name {
+  font-size:24rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:33rpx;
+}
+.list .item-header-tip {
+  font-size:24rpx;
+  font-weight:400;
+  color:rgba(250,115,41,1);
+  line-height:33rpx;
+}
+.list .item-content {
+  height: 175rpx;
+  border-bottom: 2rpx solid #EEEEEE;
+  display: flex;
+  align-items: center;
+}
+.list .item-content-img {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+.list .item-detail {
+  height: 130rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1;
+}
+.list .item-detail-name {
+  width: 500rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size:26rpx;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  line-height:37rpx;
+}
+.list .item-detail-spec {
+  font-size:24rpx;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  line-height:33rpx;
+}
+.list .item-detail-amount {
+  font-size:28rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:40rpx;
+}
+.list .item-detail-price {
+  font-size:24rpx;
+  font-weight:400;
+  color:rgba(250,115,41,1);
+  line-height:33rpx;
+}
+.list .item-footer {
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list .item-footer-name {
+  font-size:26rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:37rpx;
+}
+.list .item-footer-btn {
+  width:139rpx;
+  height:56rpx;
+  background:rgba(255,255,255,1);
+  border-radius:34rpx;
+  border:2rpx solid rgba(238,238,238,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:24rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:33rpx;
+}
+.list .item-footer-confirm {
+  border:2rpx solid rgba(250,115,41,1);
+  color: #FA7329;
+  margin-left: 30rpx;
+}

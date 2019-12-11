@@ -1,0 +1,22 @@
+@import '/styles/font.wxss';
+
+.tui-numbox-icon {
+  width: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tui-numberbox {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  align-items: center;
+  border: 2rpx solid #EEEEEE;
+}
+.tui-num-input {
+  text-align: center;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+.tui-disabled{
+  color: #ededed !important;
+}

@@ -1,1 +1,102 @@
-/* pages/message/index/index.wxss */
+.message-bg {
+  width: 100%;
+  height: 338rpx;
+  position: absolute;
+  top: 0;
+  z-index: 2018;
+}
+.message {
+  position: relative;
+  top: 0;
+  z-index: 2019;
+  padding: 28rpx 24rpx 0;
+}
+.message .message-header-img {
+  width:96rpx;
+  height:96rpx;
+  border-radius: 50%;
+}
+.message .message-header-tip {
+  font-size:32rpx;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:45rpx;
+  padding-left: 24rpx;
+}
+.message .message-card {
+  background:rgba(255,255,255,1);
+  box-shadow:0rpx 5rpx 4rpx 0rpx rgba(227,227,227,0.5);
+  border-radius:8rpx;
+  padding: 18rpx 24rpx 33rpx;
+  margin: 40rpx 0;
+}
+.message .message-card-title {
+  font-size:32rpx;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  line-height:45rpx;
+}
+.message .message-card-tip {
+  font-size:24rpx;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  line-height:33rpx;
+  padding-right: 20rpx;
+  flex: 1;
+  text-align: right;
+}
+.message .message-card-img {
+  width: 45rpx;
+  height: 44rpx;
+  margin-bottom: 17rpx;
+}
+.message .message-card-imgs {
+  width: 42rpx;
+  height: 41rpx;
+  margin-bottom: 17rpx;
+}
+.message .message-card-main {
+  padding: 50rpx 0 20rpx;
+}
+.message .message-card-spec {
+  font-size:24rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:33rpx;
+}
+.message .message-card-item {
+  height:120rpx;
+  background:rgba(248,249,253,1);
+  border-radius:8rpx;
+  padding: 10rpx 0rpx 0 18rpx;
+  position: relative;
+}
+.message .message-card-item:first-child {
+  margin-right: 70rpx;
+}
+.message .message-card-item-name {
+  font-size:40rpx;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  line-height:56rpx;
+}
+.message .message-card-item-tip {
+  font-size:24rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:33rpx;
+}
+.message .message-card-item-coupon {
+  width: 75rpx;
+  height: 47rpx;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.message .message-card-item-wellet {
+  width: 64rpx;
+  height: 55rpx;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

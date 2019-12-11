@@ -1,0 +1,197 @@
+.sign-bg {
+  width: 100%;
+  height: 320rpx;
+  position: absolute;
+  top: 0;
+  z-index: 2018;
+}
+.sign {
+  position: relative;
+  top: 0;
+  z-index: 2019;
+  padding: 0 24rpx;
+  margin-top: 72rpx;
+}
+.sign .sign-header {
+  margin-bottom: 42rpx;
+}
+.sign .sign-header-img {
+  width:82rpx;
+  height:82rpx;
+  border-radius: 50%;
+  margin-right: 18rpx;
+}
+.sign .sign-header-title {
+  font-size:32rpx;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:45rpx;
+}
+.sign .sign-header-tip {
+  font-size:22rpx;
+  font-weight:400;
+  color:rgba(159,167,196,1);
+  line-height:30rpx;
+}
+.sign .sign-header-icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 10rpx;
+}
+.sign .sign-header-num {
+  font-size:22rpx;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:30rpx;
+}
+.sign .sign-card {
+  height:453rpx;
+  background:rgba(255,255,255,1);
+  border-radius:16rpx;
+  padding: 25rpx;
+}
+.sign .card-title {
+  font-size:32rpx;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  line-height:45rpx;
+  display: block;
+  margin-bottom: 30rpx;
+}
+.sign .card-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 37rpx;
+}
+.sign .main-item {
+  flex: 1;
+  height:145rpx;
+  background:rgba(245,246,250,1);
+  border-radius:16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 37rpx;
+}
+.sign .main-item:last-child {
+  margin-right: 0rpx;
+}
+.sign .main-items {
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 11rpx 40rpx 0 25rpx;
+}
+.sign .main-name {
+  font-size:24rpx;
+  font-weight:600;
+  line-height:33rpx;
+}
+.sign .main-tip {
+  font-size:24rpx;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  line-height:33rpx;
+}
+.sign .main-img {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 8rpx 0;
+}
+.sign .main-imgs {
+  width: 75rpx;
+  height: 115rpx;
+}
+.title {
+  font-size:32rpx;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  line-height:45rpx;
+  margin-top: 50rpx;
+  margin-bottom: 30rpx;
+}
+.host {
+  /* height: 150rpx;
+  background: #fff; */
+}
+.host .host-container {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 30rpx;
+}
+.host .host-extend-box {
+  flex: 1;
+  margin-right: 23rpx;
+}
+.host .host-extend-box:last-child {
+  margin-right: 0;
+}
+.host .card {
+  background: #fff;
+  box-shadow:0px 2rpx 4rpx 0rpx rgba(229,229,229,0.5);
+  border-radius:8rpx;
+  border:2rpx solid rgba(238,238,238,1);
+  padding: 0 10rpx;
+  margin-bottom: 23rpx;
+}
+.host .card-header {
+  width:100%;
+  height:242rpx;
+  background:rgba(255,255,255,1);
+  border-radius:8rpx 8rpx 0px 0rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.host .card-header-img {
+  width:208rpx;
+  height:208rpx;
+}
+.host .card-name {
+  font-size:26rpx;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  line-height:37rpx;
+  margin: 9rpx 0;
+  display: block;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.host .card-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.host .card-option-img {
+  width: 26rpx;
+  height: 26rpx;
+}
+.host .card-original-price {
+  font-size:26rpx;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  line-height:37rpx;
+  flex: 1;
+  padding-left: 10rpx;
+}
+.host .card-cart {
+  width:131rpx;
+  height:54rpx;
+  background:rgba(254,95,8,0.2);
+  border-radius:27rpx;
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(250,115,41,1);
+}

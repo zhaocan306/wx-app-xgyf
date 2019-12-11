@@ -1,2 +1,43 @@
-<!--pages/sort/index/idnex.wxml-->
-<text>pages/sort/index/idnex.wxml</text>
+<!-- 搜索栏 -->
+<view class="search">
+  <view class="search-value flex align-cente">
+    <icon type="search" size="16"></icon>
+    <text class="search-tip">搜索</text>
+  </view>
+</view>
+<!-- 列表 -->
+<view class="flex">
+  <!-- 左边分类列表 -->
+  <scroll-view scroll-y class="nav">
+    <view class="nav-item {{tabCur == item.code ? 'nav-item-active' : ''}}" wx:for="{{navList}}" wx:key data-code="{{item.code}}" bindtap="clickTabcur">{{item.name}}</view>
+  </scroll-view>
+  <!-- 右边边商品列表 -->
+  <scroll-view scroll-y class="main">
+    <view class="main-item">
+      <image class="main-poster" src="https://m.360buyimg.com/babel/jfs/t1/98229/24/4420/32145/5de7114dE6943a891/c3fcde6a9f5aa464.jpg"></image>
+      <view class="main-container">
+        <view class="main-extend-box">
+          <block wx:for="{{goodList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+            <template is="extendItem" data="{{item,index:index}}"/>
+          </block>
+        </view>
+        <view class="main-extend-box">
+          <block wx:for="{{goodList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+            <template is="extendItem" data="{{item,index:index}}"/>
+          </block>
+        </view>
+        <!--模板-->
+        <template name="extendItem">
+          <view class="card" bindtap="toDetail">
+            <image class="card-header-img" src="{{item.img}}" mode="aspectFill"></image>
+            <text class="card-name">{{item.name}}</text>
+            <view class="card-option">
+              <text class="card-member-price"><text class="card-price-util">￥</text>{{item.price}}</text>
+              <image class="card-cart" src="/images/png/icon_tjgwc.png"></image>
+            </view>
+          </view>
+        </template>
+      </view>
+    </view>
+  </scroll-view>
+</view>

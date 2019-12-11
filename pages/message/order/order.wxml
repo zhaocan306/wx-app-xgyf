@@ -1,0 +1,30 @@
+<!-- 顶部导航栏 -->
+<Navbar list="{{list}}" tabar="{{tabCur}}" bind:toTabar="toTabCur"/>
+<!-- 内容列表 -->
+<scroll-view scroll-y class="list">
+  <view class="item">
+    <view class="item-header">
+      <text class="item-header-name">订单号:201925466875664456</text>
+      <text class="item-header-tip">待付款</text>
+    </view>
+    <view class="item-content" wx:for="{{goodList}}" wx:key>
+      <image class="item-content-img" src="{{item.img}}"></image>
+      <view class="item-detail">
+        <text class="item-detail-name">{{item.name}}</text>
+        <view class="flex align-center justify-between">
+          <text class="item-detail-spec">{{item.spec}}</text>
+          <text class="item-detail-amount">X {{item.amount}}</text>
+        </view>
+        <text class="item-detail-price">￥{{item.price}}</text>
+      </view>
+    </view>
+    <view class="item-footer">
+      <text class="item-footer-name">共2件商品   合计:¥309.00</text>
+      <view class="flex align-center">
+        <view class="item-footer-btn">取消订单</view>
+        <view class="item-footer-btn item-footer-confirm">去付款</view>
+      </view>
+    </view>
+  </view>
+  <text class="footer-no-data">—— 没有更多数据了 ——</text>
+</scroll-view>

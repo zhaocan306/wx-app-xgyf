@@ -1,0 +1,5 @@
+<view class="tui-numberbox-class tui-numberbox">
+  <view class="tui-numbox-icon iconfont icon-jianhao {{disabled || min>=value?'tui-disabled':''}}" bindtap="reduce" style="color:{{iconcolor}};font-size:{{iconsize}}rpx"></view>
+  <input type="number" value="{{inputValue}}" disabled="{{disabled}}" bindblur="blur" class="tui-num-input" style="color:{{color}};background:{{bgcolor}};height:{{height}}rpx;width:{{width}}rpx" />
+  <view class="tui-numbox-icon iconfont icon-jiahao {{disabled || value>=max?'tui-disabled':''}}" bindtap="plus" style="color:{{iconcolor}};font-size:{{iconsize}}rpx"></view>
+</view>
