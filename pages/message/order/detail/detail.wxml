@@ -1,0 +1,59 @@
+<scroll-view class="list" scroll-y>
+  <!-- 订单状态 -->
+  <view class="header">
+    <view class="flex flex-column">
+      <text class="header-title">订单已完成</text>
+      <text class="header-tip">感谢您的购买,欢迎下次再来</text>
+    </view>
+  </view>
+  <!-- 订单地址 -->
+  <view class="address border-bottom">
+    <view class="flex align-center">
+      <text class="address-name">红色小土豆  1365471547</text>
+      <text class="address-default">默认</text>
+    </view>
+    <text class="adderss-tip text-ellipsis">湖南省长沙市岳麓区金星路向日葵小区3栋1101号</text>
+  </view>
+  <!-- 送达时间  -->
+  <view class="time border-bottom">
+    <text class="time-name">送达时间</text>
+    <text class="time-name">2019-03-30</text>
+  </view>
+  <!-- 订单商品 -->
+  <view class="good" wx:for="{{goodList}}" wx:key="index">
+    <image class="good-img" src="{{item.img}}"></image>
+    <view class="good-detail border-bottom">
+      <text class="good-name">{{item.name}}</text>
+      <text class="good-spec">规格：{{item.spec}}</text>
+      <view class="flex align-center justify-between">
+        <text class="good-price">￥{{item.price}}</text>
+        <text class="good-amount">X {{item.amount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <text class="item-name">订单号</text>
+    <view class="item-value border-bottom">2019254875654477455445</view>
+  </view>
+  <view class="item">
+    <text class="item-name">下单时间</text>
+    <view class="item-value border-bottom">2019.08.04 11:20</view>
+  </view>
+  <view class="item">
+    <text class="item-name">支付方式</text>
+    <view class="item-value border-bottom">钱包支付</view>
+  </view>
+  <view class="item">
+    <text class="item-name">配送方式</text>
+    <view class="item-value border-bottom">商家配送</view>
+  </view>
+  <view class="item">
+    <text class="item-name">备注</text>
+    <view class="item-value border-bottom">早点发货</view>
+  </view>
+  <!-- 底部操作 -->
+  <view class="footer">
+    <view class="footer-btn">再次购买</view>
+    <view class="footer-btn confirm">再评价下</view>
+  </view>
+</scroll-view>

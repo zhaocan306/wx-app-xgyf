@@ -2,7 +2,7 @@
 <Navbar list="{{list}}" tabar="{{tabCur}}" bind:toTabar="toTabCur"/>
 <!-- 内容列表 -->
 <scroll-view scroll-y class="list">
-  <view class="item">
+  <view class="item" bindtap="toDetail">
     <view class="item-header">
       <text class="item-header-name">订单号:201925466875664456</text>
       <text class="item-header-tip">待付款</text>

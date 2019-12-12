@@ -52,4 +52,10 @@ Page({
       tabCur: e.detail
     })
   },
+  // 查看订单详情
+  toDetail() {
+    wx.navigateTo({
+      url: '/pages/message/order/detail/detail'
+    })
+  }
 })
