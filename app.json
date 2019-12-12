@@ -13,7 +13,8 @@
     "pages/message/address/add/add",
     "pages/cart/order/order",
     "pages/message/coupon/coupon",
-    "pages/message/order/detail/detail"
+    "pages/message/order/detail/detail",
+    "pages/index/group/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

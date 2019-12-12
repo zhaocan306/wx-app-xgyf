@@ -111,6 +111,24 @@
   background: #fff;
   opacity: 1!important;
 }
+.swiper-container .swiper-tap {
+  width: 94rpx;
+  height: 44rpx;
+  position: absolute;
+  right: 24rpx;
+  bottom: 20rpx;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  background:rgba(0,0,0,1);
+  border-radius:26rpx;
+  opacity:0.26;
+}
+.swiper-container .swiper-num {
+  font-size:26rpx;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+}
 /* ==================
          模态窗口
  ==================== */

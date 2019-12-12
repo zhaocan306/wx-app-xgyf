@@ -1,5 +1,5 @@
 <scroll-view scroll-y class="list">
-  <view class="item" wx:for="{{8}}" wx:key="index">
+  <view class="item" wx:for="{{8}}" wx:key="index" bindtap="toDetail">
     <image class="item-img" src="https://img14.360buyimg.com/n0/jfs/t24622/168/1466210857/627211/fd1957a0/5bb225e2Nb553ce4b.png" mode="aspectFill"></image>
     <view class="item-detail">
       <text class="item-title text-ellipsis">泰国进口 金枕头榴莲 顺丰或京东发出 新鲜 水果 生鲜 坏果包赔 6-7斤</text>

@@ -1,0 +1,145 @@
+<scroll-view scroll-y class="list">
+  <!-- 轮播图 -->
+  <view class='swiper-container header'>
+    <swiper class='header-swiper' circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper">
+      <swiper-item wx:for="{{posterList}}" wx:key="index">
+        <image src="{{item}}" mode="aspectFill"></image>
+      </swiper-item>
+    </swiper>
+    <view class="swiper-tap">
+      <text class="swiper-num">{{cardCur+1}}/{{posterList.length}}</text>
+    </view>
+  </view>
+  <!-- 拼团倒计时 -->
+  <view class="group">
+    <text class="group-member-price"><text class="group-member-util">￥</text>200</text>
+    <view class="flex align-start flex-column flex-sub">
+      <text class="group-original-price">原价¥208.00</text>
+      <view class="group-people">2人团</view>
+    </view>
+    <view class="group-time">
+      <text class="group-time-title">距离结束还剩</text>
+      <view class="flex align-center">
+        <view class="group-time-item">{{h}}</view>
+        <text class="group-time-dot">:</text>
+        <view class="group-time-item">{{i}}</view>
+        <text class="group-time-dot">:</text>
+        <view class="group-time-item">{{s}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 商品简介 -->
+  <view class="flex flex-column content">
+    <text class="content-name">泰国进口 金枕头榴莲 顺丰或京东发出 新鲜 水果 生鲜 坏果包赔 6-7斤</text>
+    <text class="content-tip">泰国进口 坏果包赔 6-7斤</text>
+    <view class="flex align-center content-options">
+      <view class="flex align-center flex-column padding-r-xl">
+        <text class="iconfont icon-icon-test content-option"></text>
+        <text class="content-option-tip">收藏</text>
+      </view>
+      <view class="flex align-center flex-column">
+        <text class="iconfont icon-fenxiang content-option"></text>
+        <text class="content-option-tip">分享</text>
+      </view>
+    </view>
+    <view class="flex align-center">
+      <view class="flex align-center">
+        <text class="iconfont icon-gouhao content-icon"></text>
+        <text class="content-desc">门店自提</text>
+      </view>
+      <view class="flex align-center">
+        <text class="iconfont icon-gouhao content-icon"></text>
+        <text class="content-desc">上架配送</text>
+      </view>
+      <view class="flex align-center">
+        <text class="iconfont icon-gouhao content-icon"></text>
+        <text class="content-desc">快递</text>
+      </view>
+    </view>
+  </view>
+  <!-- 商品信息 -->
+  <view class="introduce flex flex-column">
+    <view class="introduce-item flex align-center justify-between">
+      <text class="introduce-name">领券</text>
+      <view class="introduce-value flex align-center">
+        <image class="introduce-img" src="/images/png/bg_yhj.png"></image>
+      </view>
+      <text class="iconfont icon-arrowRight"></text>
+    </view>
+    <view class="introduce-item flex align-center justify-between">
+      <text class="introduce-name">已选</text>
+      <text class="introduce-value">8斤装一个</text>
+      <text class="iconfont icon-arrowRight"></text>
+    </view>
+    <view class="introduce-item flex align-center justify-between">
+      <text class="introduce-name">配送</text>
+      <text class="introduce-value">到店自取</text>
+      <text class="iconfont icon-arrowRight"></text>
+    </view>
+  </view>
+   <!-- 拼团人数 -->
+  <view class="people">
+    <view class="nav">
+      <view class="nav-line"></view>
+      <text class="nav-title">已有50人成团</text>
+    </view>
+    <view class="flex align-center justify-between">
+      <image class="people-img"></image>
+    </view>
+  </view>
+  <!-- 商品评论 -->
+  <view class="card">
+    <view class="nav">
+      <view class="nav-line"></view>
+      <text class="nav-title">商品评价(215条)</text>
+      <view class="flex align-center">
+        <text class="nav-tip">查看全部</text>
+        <text class="iconfont icon-arrowRight"></text>
+      </view>
+    </view>
+    <view class="comment" wx:for="{{2}}" wx:key="index">
+      <view class="comment-header flex align-start justify-between">
+        <image class="comment-header-img" src="{{avatarUrl}}"></image>
+        <view class="flex flex-column flex-sub">
+          <text class="comment-header-name">{{nickName}}</text>
+          <view class="flex align-center">
+            <text class="iconfont icon-iconfontxingxing icon-star {{index!=4 ? 'text-orange' : ''}}" wx:for="{{5}}" wx:key="index"></text>
+          </view>
+        </view>
+        <text class="comment-header-time">18-11-19</text>
+      </view>
+      <text class="comment-content">很好吃，本次购物很满意，很香甜，到的时候一个破皮了里面没烂，刚刚熟好直接吃了，快吃完了才想起来拍照。</text>
+      <view class="comment-list flex align-center">
+        <image class="comment-list-img" src="{{posterList[0]}}"></image>
+      </view>
+    </view>
+    <view class="comment-footer flex align-center justify-center">
+      <view class="comment-btn flex align-center justify-center">查看全部评论</view>
+    </view>
+  </view>
+  <!-- 商品详情 -->
+  <view class="card">
+    <view class="nav">
+      <view class="nav-line"></view>
+      <text class="nav-title">商品详情</text>
+    </view>
+  </view>
+  <view class="detail-list flex flex-column">
+    <image class="detail-list-img" wx:for="{{detailList}}" wx:key="index" src="{{item}}" mode="aspectFill"></image>
+  </view>
+</scroll-view>
+<!-- 底部操作按钮 -->
+<view class="footer flex align-center justify-between">
+  <view class="footer-header flex">
+    <view class="flex align-center flex-sub flex-column">
+      <image class="footer-header-img" src="/images/png/icon_lxkf.png"></image>
+      <text class="footer-header-tip">联系客服</text>
+    </view>
+    <view class="flex align-center flex-sub flex-column">
+      <image class="footer-header-img" src="/images/png/icon_gwc.png"></image>
+      <text class="footer-header-tip">购物车</text>
+    </view>
+  </view>
+  <view class="footer-btn flex align-center flex-sub justify-center bg-yellow">加入购物车</view>
+  <view class="footer-btn flex align-center flex-sub justify-center bg-orange">立即购买</view>
+</view>
