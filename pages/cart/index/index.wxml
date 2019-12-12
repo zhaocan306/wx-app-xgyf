@@ -1,5 +1,5 @@
 <scroll-view scroll-y class="list">
-  <view class="item" wx:for="{{cartList}}" wx:key>
+  <view class="item" wx:for="{{cartList}}" wx:key="index">
     <view class="item-header flex align-center">
       <checkbox-group data-index="{{index}}" bindchange="checkboxChange">
         <checkbox checked="{{item.isSelect}}"/>
@@ -28,5 +28,5 @@
     <text class="footer-content-title">合计：<text class="footer-content-price">￥{{orderPrice}}</text></text>
     <text class="footer-content-tip">(不含运费)</text>
   </view>
-  <view class="footer-btn {{orderAmount == 0 ? 'disabled' : ''}}">去结算({{orderAmount}})</view>
+  <view class="footer-btn {{orderAmount == 0 ? 'disabled' : ''}}" bindtap="submitOrder">去结算({{orderAmount}})</view>
 </view>

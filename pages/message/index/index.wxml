@@ -11,7 +11,7 @@
       <text class="iconfont icon-arrowRight" data-index="0" bindtap="toOrderList"></text>
     </view>
     <view class="flex align-center justify-around message-card-main">
-      <view class="flex align-center flex-column" wx:for="{{list}}" wx:key data-index="{{item.code}}" bindtap="toOrderList">
+      <view class="flex align-center flex-column" wx:for="{{list}}" wx:key="index" data-index="{{item.code}}" bindtap="toOrderList">
         <image class="message-card-img" src="{{item.img}}"></image>
         <text class="message-card-spec">{{item.tip}}</text>
       </view>

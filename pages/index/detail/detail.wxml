@@ -2,12 +2,12 @@
   <!-- 轮播图 -->
   <view class='swiper-container header'>
     <swiper class='header-swiper' circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper">
-      <swiper-item wx:for="{{posterList}}" wx:key>
+      <swiper-item wx:for="{{posterList}}" wx:key="index">
         <image src="{{item}}" mode="aspectFill"></image>
       </swiper-item>
     </swiper>
     <view class="dots">
-      <block wx:for="{{posterList}}" wx:key>
+      <block wx:for="{{posterList}}" wx:key="index">
         <view class="dot {{cardCur==index?'dot-active':''}}"></view>
       </block>
     </view>
@@ -77,13 +77,13 @@
         <text class="iconfont icon-arrowRight"></text>
       </view>
     </view>
-    <view class="comment" wx:for="{{2}}" wx:key>
+    <view class="comment" wx:for="{{2}}" wx:key="index">
       <view class="comment-header flex align-start justify-between">
         <image class="comment-header-img" src="{{avatarUrl}}"></image>
         <view class="flex flex-column flex-sub">
           <text class="comment-header-name">{{nickName}}</text>
           <view class="flex align-center">
-            <text class="iconfont icon-iconfontxingxing icon-star {{index!=4 ? 'text-orange' : ''}}" wx:for="{{5}}" wx:key></text>
+            <text class="iconfont icon-iconfontxingxing icon-star {{index!=4 ? 'text-orange' : ''}}" wx:for="{{5}}" wx:key="index"></text>
           </view>
         </view>
         <text class="comment-header-time">18-11-19</text>
@@ -105,7 +105,7 @@
     </view>
   </view>
   <view class="detail-list flex flex-column">
-    <image class="detail-list-img" wx:for="{{detailList}}" wx:key src="{{item}}" mode="aspectFill"></image>
+    <image class="detail-list-img" wx:for="{{detailList}}" wx:key="index" src="{{item}}" mode="aspectFill"></image>
   </view>
 </scroll-view>
 <!-- 底部操作按钮 -->

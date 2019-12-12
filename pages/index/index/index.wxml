@@ -10,7 +10,7 @@
 <!-- 海报 -->
 <view class="poster swiper-container">
   <swiper class="card-swiper" circular="true" autoplay="true" interval="4000" duration="500" easing-function="linear" bindchange="cardSwiper">
-    <block wx:for="{{posterList}}" wx:key>
+    <block wx:for="{{posterList}}" wx:key="index">
       <swiper-item class="{{cardCur==index?'cur':''}}">
         <view class="swiper-item">
           <image class='swiper-img' src="{{item}}" mode="aspectFill"></image>
@@ -19,7 +19,7 @@
       </block>
   </swiper>
   <view class="dots">
-    <block wx:for="{{posterList}}" wx:key>
+    <block wx:for="{{posterList}}" wx:key="index">
       <view class="dot {{cardCur==index?'dot-active':''}}"></view>
     </block>
   </view>
@@ -49,7 +49,7 @@
   <image class="notice-img" src="/images/png/bg_sy_xx.png"></image>
   <text class="notice-line"></text>
   <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="3000" class="notice-swiper">
-    <swiper-item wx:for="{{newsList}}" wx:key="{{index}}" class="flex align-center">
+    <swiper-item wx:for="{{newsList}}" wx:key="index" class="flex align-center">
       <view class="notice-news-item" bindtap='detail'>{{item}}</view>
     </swiper-item>
   </swiper>
@@ -61,13 +61,13 @@
     <text class="rush-title">限时抢购</text>
   </view>
   <view class="rush-nav">
-    <view class="nav-item {{index == tabCur ? 'nav-name-active' : ''}}" wx:for="{{activList}}" wx:key data-index="{{index}}" bindtap="toSelectactive">
+    <view class="nav-item {{index == tabCur ? 'nav-name-active' : ''}}" wx:for="{{activList}}" wx:key="index" data-index="{{index}}" bindtap="toSelectactive">
       <text class="nav-name">{{item.time}}</text>
       <text class="nav-name">{{item.tip}}</text>
     </view>
   </view>
   <scroll-view scroll-y class="rush-list">
-    <view class="list-item" wx:for="{{3}}" wx:key bindtap="toDetail">
+    <view class="list-item" wx:for="{{3}}" wx:key="index" bindtap="toDetail">
       <view class="list-flag">
         <image class="flag-img" src="/images/png/bg_ms.png"></image>
         <text class="flag-tip">秒杀</text>
@@ -100,12 +100,12 @@
   </view>
   <view class="host-container">
     <view class="host-extend-box">
-      <block wx:for="{{goodList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+      <block wx:for="{{goodList}}" wx:key="index" wx:if="{{(index+1)%2!=0}}">
         <template is="extendItem" data="{{item,index:index}}"/>
       </block>
     </view>
     <view class="host-extend-box">
-      <block wx:for="{{goodList}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+      <block wx:for="{{goodList}}" wx:key="index" wx:if="{{(index+1)%2==0}}">
         <template is="extendItem" data="{{item,index:index}}"/>
       </block>
     </view>

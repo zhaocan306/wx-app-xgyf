@@ -1,0 +1,114 @@
+<scroll-view class="list" scroll-y>
+  <!-- 顶部栏 -->
+  <view class="header">
+    <!-- 梯形状态栏 -->
+    <view class="nav">
+      <view class="{{tabCur == 1 ? 'nav-item-active nav-item-left-active' : 'nav-item-default nav-item-left-default'}}" data-index="1" bindtap="toTabCur">
+        <text class="nav-item-name {{tabCur == 1 ? 'nav-item-name-active' : ''}}">商家配送</text>
+      </view>
+      <view class="{{tabCur == 2 ? 'nav-item-active nav-item-right-active' : 'nav-item-default nav-item-right-default'}}" data-index="2" bindtap="toTabCur">
+        <text class="nav-item-name {{tabCur == 2 ? 'nav-item-name-active' : ''}}">门店自提</text>
+      </view>
+    </view>
+    <!-- 地址选择栏 -->
+    <view class="address border-bottom">
+      <view class="flex flex-column">
+        <view class="flex align-center">
+          <text class="address-name">红色小土豆  1365471547</text>
+          <text class="address-default">默认</text>
+        </view>
+        <text class="address-tip text-ellipsis">湖南省长沙市岳麓区金星路向日葵小区3栋1101号</text>
+      </view>
+      <text class="iconfont icon-arrowRight"></text>
+    </view>
+    <!-- 送达时间 -->
+    <view class="item radius-bottom">
+      <text class="item-name">送达时间</text>
+      <view class="item-content">
+        <text class="item-value">2019-03-30</text>
+        <text class="iconfont icon-arrowRight"></text>
+      </view>
+    </view>
+  </view>
+  <!-- 商品内容 -->
+  <view class="content">
+    <view class="good" wx:for="{{goodList}}" wx:key="index">
+      <image class="good-img" src="{{item.img}}"></image>
+      <view class="good-detail border-bottom">
+        <text class="good-name">{{item.name}}</text>
+        <text class="good-spec">规格：{{item.spec}}</text>
+        <view class="flex align-center justify-between">
+          <text class="good-price">￥{{item.price}}</text>
+          <text class="good-amount">X {{item.amount}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="item" bindtap="showCoupon">
+      <text class="item-name">优惠券</text>
+      <view class="item-content border-bottom">
+        <text class="item-value">满200减50优惠卷</text>
+        <text class="iconfont icon-arrowRight"></text>
+      </view>
+    </view>
+    <view class="item">
+      <text class="item-name">商品金额</text>
+      <view class="item-content border-bottom">
+        <text class="item-price">¥350.00</text>
+      </view>
+    </view>
+    <view class="item">
+      <text class="item-name">优惠金额</text>
+      <view class="item-content border-bottom">
+        <text class="item-price text-oranges">-50.00</text>
+      </view>
+    </view>
+    <view class="item">
+      <text class="item-name">运费</text>
+      <view class="item-content border-bottom">
+        <text class="item-price">+0.00</text>
+      </view>
+    </view>
+    <view class="item radius-bottom">
+      <text class="item-name">备注</text>
+      <view class="item-content">
+        <text class="item-spec">偏好或其他需求</text>
+      </view>
+    </view>
+  </view>
+  <view style="height:30rpx;"></view>
+</scroll-view>
+<!-- 底部操作栏 -->
+<view class="footer">
+  <view class="flex align-center">
+    <text class="footer-name">应付金额：</text>
+    <text class="footer-price"><text class="footer-util">￥</text>250.00</text>
+  </view>
+  <view class="footer-btn">提交订单</view>
+</view>
+<!-- 优惠券选择弹窗 -->
+<view class="cc-modal bottom-modal {{isShowCoupon ? 'show' : ''}}" bindtap="hideCoupon">
+  <view class="cc-dialog" catchtap>
+    <view class="cc-header">
+      <text class="cc-title">优惠券</text>
+      <text class="iconfont icon-cross-fill cc-close" bindtap="hideCoupon"></text>
+    </view>
+    <scroll-view class="cc-content" scroll-y>
+      <view class="cc-item">
+        <image class="cc-item-img" src="/images/png/bg_yhj_one.png"></image>
+        <view class="card">
+          <view class="card-header">
+            <text class="card-header-util">￥<text class="card-header-price">10</text></text>
+            <text class="card-header-tip">满50元使用</text>
+          </view>
+          <view class="card-content">
+            <text class="card-content-title">全场通用优惠卷</text>
+            <text class="card-content-time">2019.09.24-2020.09.24</text>
+          </view>
+          <checkbox-group data-index="{{index}}" bindchange="checkboxChange">
+            <checkbox checked="{{item.isSelect}}"/>
+          </checkbox-group>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

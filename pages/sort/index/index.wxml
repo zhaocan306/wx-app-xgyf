@@ -9,7 +9,7 @@
 <view class="flex">
   <!-- 左边分类列表 -->
   <scroll-view scroll-y class="nav">
-    <view class="nav-item {{tabCur == item.code ? 'nav-item-active' : ''}}" wx:for="{{navList}}" wx:key data-code="{{item.code}}" bindtap="clickTabcur">{{item.name}}</view>
+    <view class="nav-item {{tabCur == item.code ? 'nav-item-active' : ''}}" wx:for="{{navList}}" wx:key="index" data-code="{{item.code}}" bindtap="clickTabcur">{{item.name}}</view>
   </scroll-view>
   <!-- 右边边商品列表 -->
   <scroll-view scroll-y class="main">
@@ -17,12 +17,12 @@
       <image class="main-poster" src="https://m.360buyimg.com/babel/jfs/t1/98229/24/4420/32145/5de7114dE6943a891/c3fcde6a9f5aa464.jpg"></image>
       <view class="main-container">
         <view class="main-extend-box">
-          <block wx:for="{{goodList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+          <block wx:for="{{goodList}}" wx:key="index" wx:if="{{(index+1)%2!=0}}">
             <template is="extendItem" data="{{item,index:index}}"/>
           </block>
         </view>
         <view class="main-extend-box">
-          <block wx:for="{{goodList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+          <block wx:for="{{goodList}}" wx:key="index" wx:if="{{(index+1)%2!=0}}">
             <template is="extendItem" data="{{item,index:index}}"/>
           </block>
         </view>

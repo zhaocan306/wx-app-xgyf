@@ -9,7 +9,7 @@ Page({
         spec: '4-6斤',
         price: 200,
         value: 1,
-        isSelect: false
+        isSelect: true
       },
       {
         url: 'https://img14.360buyimg.com/n0/jfs/t1/80943/18/9288/317083/5d70af2cEd76ed14f/9f3e6efcada049c2.jpg',
@@ -95,6 +95,12 @@ Page({
     self.setData({
       orderPrice: orderPrice.toFixed(2),
       orderAmount: orderAmount
+    })
+  },
+  // 提交订单
+  submitOrder() {
+    wx.navigateTo({
+      url: '/pages/cart/order/order'
     })
   }
 })

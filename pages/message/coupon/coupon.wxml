@@ -8,7 +8,7 @@
 </view>
 <!-- 列表 -->
 <scroll-view scroll-y class="list">
-  <view class="item" wx:for="{{dataList}}" wx:key wx:if="{{tabCur == 1}}">
+  <view class="item" wx:for="{{dataList}}" wx:key="index" wx:if="{{tabCur == 1}}">
     <image class="item-img" src="{{item.img}}"></image>
     <view class="card">
       <view class="card-header">
@@ -22,7 +22,7 @@
       <view class="card-option">去使用</view>
     </view>
   </view>
-  <view class="item" wx:for="{{dataList}}" wx:key wx:if="{{tabCur == 2}}">
+  <view class="item" wx:for="{{dataList}}" wx:key="index" wx:if="{{tabCur == 2}}">
     <image class="item-img" src="/images/png/bg_yhj_ysy.png"></image>
     <view class="card">
       <view class="card-header">

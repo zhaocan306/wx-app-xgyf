@@ -7,7 +7,7 @@
       <text class="item-header-name">订单号:201925466875664456</text>
       <text class="item-header-tip">待付款</text>
     </view>
-    <view class="item-content" wx:for="{{goodList}}" wx:key>
+    <view class="item-content" wx:for="{{goodList}}" wx:key="index">
       <image class="item-content-img" src="{{item.img}}"></image>
       <view class="item-detail">
         <text class="item-detail-name">{{item.name}}</text>

@@ -1,5 +1,5 @@
 <view class="nav">
   <view class="nav-list">
-    <view class="nav-item {{tabar == item.code ? 'nav-item-active' : ''}}" wx:for="{{list}}" wx:key data-index="{{item.code}}" bindtap="toTabar">{{item.name}}</view>
+    <view class="nav-item {{tabar == item.code ? 'nav-item-active' : ''}}" wx:for="{{list}}" wx:key="index" data-index="{{item.code}}" bindtap="toTabar">{{item.name}}</view>
   </view>
 </view>

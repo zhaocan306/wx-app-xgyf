@@ -11,6 +11,7 @@
     "pages/message/order/order",
     "pages/message/address/address",
     "pages/message/address/add/add",
+    "pages/cart/order/order",
     "pages/message/coupon/coupon"
   ],
   "window": {

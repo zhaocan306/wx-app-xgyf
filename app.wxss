@@ -201,6 +201,9 @@ image {
 .text-black  {
   color: #333333!important;
 }
+.text-oranges {
+  color: #FA7329!important;
+}
 .text-orange {
   color: #FFA854!important;
 }

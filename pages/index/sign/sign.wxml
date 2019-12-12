@@ -70,12 +70,12 @@
   <view class="host">
     <view class="host-container">
       <view class="host-extend-box">
-        <block wx:for="{{goodList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+        <block wx:for="{{goodList}}" wx:key="index" wx:if="{{(index+1)%2!=0}}">
           <template is="extendItem" data="{{item,index:index}}"/>
         </block>
       </view>
       <view class="host-extend-box">
-        <block wx:for="{{goodList}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+        <block wx:for="{{goodList}}" wx:key="index" wx:if="{{(index+1)%2==0}}">
           <template is="extendItem" data="{{item,index:index}}"/>
         </block>
       </view>
