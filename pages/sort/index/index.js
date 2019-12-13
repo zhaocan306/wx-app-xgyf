@@ -1,6 +1,9 @@
 Page({
   data: {
-    tabCur: 1,
+    tabCur: 0,
+    MainCur: 0,
+    VerticalNavTop: 0,
+    load: true,
     navList: [
       {
         name: '苹果类',
@@ -52,9 +55,42 @@ Page({
   },
   // 点击分类
   clickTabcur(e) {
-    let code = e.currentTarget.dataset.code;
+    let index = e.currentTarget.dataset.index;
     this.setData({
-      tabCur: code
+      tabCur: index,
+      MainCur: index,
+      VerticalNavTop: (index - 1) * 50
     })
+  },
+  VerticalMain(e) {
+    let that = this;
+    let list = this.data.navList;
+    let tabHeight = 0;
+    if (this.data.load) {
+      for (let i = 0; i < list.length; i++) {
+        let view = wx.createSelectorQuery().select("#main-" + i);
+        view.fields({
+          size: true
+        }, data => {
+          list[i].top = tabHeight;
+          tabHeight = tabHeight + data.height;
+          list[i].bottom = tabHeight;
+        }).exec();
+      }
+      that.setData({
+        load: false,
+        navList: list
+      })
+    }
+    let scrollTop = e.detail.scrollTop + 20;
+    for (let i = 0; i < list.length; i++) {
+      if (scrollTop > list[i].top && scrollTop < list[i].bottom) {
+        that.setData({
+          VerticalNavTop: (i - 1) * 50,
+          tabCur: i
+        })
+        return false
+      }
+    }
   }
 })

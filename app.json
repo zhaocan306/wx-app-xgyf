@@ -14,7 +14,8 @@
     "pages/cart/order/order",
     "pages/message/coupon/coupon",
     "pages/message/order/detail/detail",
-    "pages/index/group/detail/detail"
+    "pages/index/group/detail/detail",
+    "pages/index/group/join/join"
   ],
   "window": {
     "backgroundTextStyle": "light",

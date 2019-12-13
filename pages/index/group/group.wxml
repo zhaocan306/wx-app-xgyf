@@ -13,7 +13,7 @@
           <text class="item-price">￥200.00</text>
         </view>
         <text class="item-original">￥208.00</text>
-        <view class="item-btn">去开团</view>
+        <view class="item-btn" catchtap="joinGroup">去开团</view>
       </view>
     </view>
   </view>

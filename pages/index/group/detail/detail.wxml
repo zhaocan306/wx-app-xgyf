@@ -7,7 +7,7 @@
       </swiper-item>
     </swiper>
     <view class="swiper-tap">
-      <text class="swiper-num">{{cardCur+1}}/{{posterList.length}}</text>
+      <view class="swiper-num">{{cardCur+1}}/{{posterList.length}}</view>
     </view>
   </view>
   <!-- 拼团倒计时 -->
@@ -84,7 +84,41 @@
       <text class="nav-title">已有50人成团</text>
     </view>
     <view class="flex align-center justify-between">
-      <image class="people-img"></image>
+      <image class="people-img" src="{{avatarUrl}}"></image>
+      <text class="people-name text-ellipsis">人去楼已空</text>
+      <view class="people-option">
+        <view class="people-detail">
+          <text class="people-desc">还差<text class="text-oranges">1</text>人拼团</text>
+          <text class="people-tip">剩余{{h}}:{{i}}:{{s}}</text>
+        </view>
+        <view class="people-btn" bindtap="joinGroup">去参团</view>
+      </view>
+    </view>
+  </view>
+  <!-- 拼团玩法 -->
+  <view class="mode">
+    <view class="nav">
+      <view class="nav-line"></view>
+      <text class="nav-title">拼团玩法</text>
+    </view>
+    <view class="mode-content">
+      <view class="flex align-center">
+        <view class="mode-title">1</view>
+        <text class="mode-name padding-r-xl">开团/参团</text>
+        <text class="iconfont icon-arrowRight"></text>
+      </view>
+      <view class="flex align-center">
+        <view class="mode-title">2</view>
+        <text class="mode-name padding-r-xl">邀请好友</text>
+        <text class="iconfont icon-arrowRight"></text>
+      </view>
+      <view class="flex align-center">
+        <view class="mode-title">3</view>
+        <text class="mode-name">满员发货</text>
+      </view>
+    </view>
+    <view class="flex align-center justify-end">
+      <text class="mode-tip">不满自动退款</text>
     </view>
   </view>
   <!-- 商品评论 -->
@@ -140,6 +174,12 @@
       <text class="footer-header-tip">购物车</text>
     </view>
   </view>
-  <view class="footer-btn flex align-center flex-sub justify-center bg-yellow">加入购物车</view>
-  <view class="footer-btn flex align-center flex-sub justify-center bg-orange">立即购买</view>
+  <view class="footer-btn flex align-center flex-column flex-sub justify-center bg-yellow">
+    <text>¥98.00</text>
+    <text class="footer-name">单独购买</text>
+  </view>
+  <view class="footer-btn flex align-center flex-column flex-sub justify-center bg-orange">
+    <text>¥68.00</text>
+    <text class="footer-name">单独购买</text>
+  </view>
 </view>

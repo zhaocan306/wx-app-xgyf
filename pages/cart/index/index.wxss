@@ -64,6 +64,36 @@
   color:rgba(254,95,8,1);
   line-height:33rpx;
 }
+.list .move-cur {
+  border-radius: 0!important;
+  transform: translateX(-200rpx);
+  transition: all .2s;
+  border: 8rpx 0 0 8rpx!important;
+}
+.list .item-move {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 200rpx;
+  height: 100%;
+  border-radius: 0 8rpx 0 8rpx;
+  transition: all .5s;
+  transform: translateX(100%);
+}
+.list .item-delete {
+  width: 200rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E92B2D;
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  border-radius: 0 8rpx 8rpx 0;
+}
 /*  重写 checkbox 样式  */
 /* 未选中的 背景样式 */
 checkbox .wx-checkbox-input {
@@ -104,7 +134,6 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   justify-content: space-between;
   background: #fff;
   box-sizing: border-box;
-  padding-left: 24rpx;
 }
 .footer .footer-name {
   font-size:26rpx;

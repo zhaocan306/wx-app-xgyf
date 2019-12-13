@@ -1,5 +1,5 @@
 <scroll-view scroll-y class="list">
-  <view class="item" wx:for="{{cartList}}" wx:key="index">
+  <view class="item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{cartList}}" wx:key="index" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
     <view class="item-header flex align-center">
       <checkbox-group data-index="{{index}}" bindchange="checkboxChange">
         <checkbox checked="{{item.isSelect}}"/>
@@ -13,6 +13,9 @@
     <view class="item-content">
       <text class="item-content-price"><text class="item-content-util">￥</text>{{item.price}}</text>
       <Numberbox value="{{item.value}}" index="{{index}}" bind:change="changeNumber"></Numberbox>
+    </view>
+    <view class="item-move">
+      <view class='item-delete' bindtap="deleteImg">删除</view>
     </view>
   </view>
 </scroll-view>

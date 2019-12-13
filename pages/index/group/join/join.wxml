@@ -1,0 +1,61 @@
+<!-- 背景图 -->
+<image class="detail-bg" src="/images/png/bg_qd.png"></image>
+<!-- 拼团详情 -->
+<view class="detail">
+  <view class="card">
+    <view class="good">
+      <image class="good-img" src="https://img14.360buyimg.com/n0/jfs/t24622/168/1466210857/627211/fd1957a0/5bb225e2Nb553ce4b.png"></image>
+      <view class="good-detail">
+        <text class="good-name text-ellipsis">泰国进口 金枕头榴莲 顺丰或京东发出 新鲜 水果 生鲜 坏果包赔 6-7斤</text>
+        <view class="flex align-center">
+          <text class="good-spec">规格:4-8斤</text>
+          <text class="good-amout">数量:X1</text>
+        </view>
+        <text class="good-price"><text class="good-util">￥</text>200</text>
+      </view>
+    </view>
+    <text class="card-title">还剩<text class="text-oranges">2人</text>成团</text>
+    <text class="card-time">距离结束还剩  11:50:26</text>
+    <view class="card-group">
+      <view class="card-group-header">
+        <image class="card-group-img" src="{{avatarUrl}}"></image>
+        <view class="card-group-tip">团长</view>
+      </view>
+      <view class="card-group-header">
+        <image class="card-group-img" src="{{avatarUrl}}"></image>
+      </view>
+      <view class="card-group-header card-group-item">
+        <!-- <image class="card-group-img" src="{{avatarUrl}}"></image> -->
+        <text class="iconfont icon-qm card-group-icon"></text>
+      </view>
+      <view class="card-group-header card-group-item">
+        <text class="iconfont icon-qm card-group-icon"></text>
+      </view>
+    </view>
+    <view class="card-btn">邀请好友参团</view>
+  </view>
+  <view class="rank-item">
+    <view class="line-left"></view>
+    <text class="rank-title">拼团TOP榜</text>
+    <view class="line-right"></view>
+  </view>
+  <view class="list-item" wx:for="{{3}}" wx:key="index" bindtap="toDetail">
+    <image class="list-img" src="https://img14.360buyimg.com/n0/jfs/t24622/168/1466210857/627211/fd1957a0/5bb225e2Nb553ce4b.png" mode="aspectFill"></image>
+    <view class="list-detail">
+      <text class="list-title text-ellipsis">泰国进口 金枕头榴莲 顺丰或京东发出 新鲜 水果 生鲜 坏果包赔 6-7斤</text>
+      <text class="list-spec text-ellipsis">规格:4-6斤</text>
+      <view class="list-progress cc-progress round">
+        <view class="bg-green round" style="width:66.66%">66.66%</view>
+      </view>
+      <view class="flex align-center justify-between">
+        <view class="flex align-center">
+          <text class="list-member">秒杀价:</text>
+          <text class="list-price">￥200.00</text>
+        </view>
+        <text class="list-original">￥208.00</text>
+        <view class="list-btn">去开团</view>
+      </view>
+    </view>
+  </view>
+  <view style="height: 30rpx;"></view>
+</view>

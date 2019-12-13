@@ -47,6 +47,12 @@ Page({
       countdown: null
     })
   },
+  // 去参团
+  joinGroup() {
+    wx.navigateTo({
+      url: '/pages/index/group/join/join'
+    })
+  },
   // 轮播图切换
   cardSwiper(e) {
     this.setData({

@@ -9,11 +9,11 @@
 <view class="flex">
   <!-- 左边分类列表 -->
   <scroll-view scroll-y class="nav">
-    <view class="nav-item {{tabCur == item.code ? 'nav-item-active' : ''}}" wx:for="{{navList}}" wx:key="index" data-code="{{item.code}}" bindtap="clickTabcur">{{item.name}}</view>
+    <view class="nav-item {{tabCur == index ? 'nav-item-active' : ''}}" wx:for="{{navList}}" wx:key="index" data-index="{{index}}" bindtap="clickTabcur">{{item.name}}</view>
   </scroll-view>
   <!-- 右边边商品列表 -->
-  <scroll-view scroll-y class="main">
-    <view class="main-item">
+  <scroll-view scroll-y scroll-with-animation class="main" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="main-item" wx:for="{{navList}}" wx:key="index" wx:for-item="newitem" wx:for-index="idx" id="main-{{idx}}">
       <image class="main-poster" src="https://m.360buyimg.com/babel/jfs/t1/98229/24/4420/32145/5de7114dE6943a891/c3fcde6a9f5aa464.jpg"></image>
       <view class="main-container">
         <view class="main-extend-box">
