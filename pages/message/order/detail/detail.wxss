@@ -29,6 +29,10 @@
   line-height:33rpx;
   padding-top: 14rpx;
 }
+.header .header-img {
+  width: 140rpx;
+  height: 100rpx;
+}
 /* 地址 */
 .address {
   display: flex;

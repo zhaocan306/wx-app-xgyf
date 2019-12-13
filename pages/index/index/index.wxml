@@ -36,8 +36,8 @@
     <text class="options-tip">团购</text>
   </view>
   <view class="flex align-center flex-column">
-    <image class="option-img" src="/images/png/icon_qd.png"></image>
-    <text class="options-tip">领券</text>
+    <image class="option-img" src="/images/png/icon_djzt.png"></image>
+    <text class="options-tip">当季主推</text>
   </view>
   <view class="flex align-center flex-column">
     <image class="option-img" src="/images/png/icon_jfsc.png"></image>
@@ -66,8 +66,8 @@
       <text class="nav-name">{{item.tip}}</text>
     </view>
   </view>
-  <scroll-view scroll-y class="rush-list">
-    <view class="list-item" wx:for="{{3}}" wx:key="index" bindtap="toDetail">
+  <view class="rush-list">
+    <view class="list-item" wx:for="{{2}}" wx:key="index" bindtap="toDetail">
       <view class="list-flag">
         <image class="flag-img" src="/images/png/bg_ms.png"></image>
         <text class="flag-tip">秒杀</text>
@@ -89,8 +89,7 @@
         </view>
       </view>
     </view>
-    <view class="list-footer"></view>
-  </scroll-view>
+  </view>
 </view>
 <!-- 热卖推荐 -->
 <view class="host">

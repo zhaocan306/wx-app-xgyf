@@ -84,6 +84,7 @@
 }
 .main .card-name {
   width: 240rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
   font-size:26rpx;
   font-weight:400;
   color:rgba(51,51,51,1);
